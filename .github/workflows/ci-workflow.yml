@@ -27,9 +27,10 @@ on:
 jobs:
   ci_workflow:
     name: Run
-    uses: OpenDevicePartnership/patina-devops/.github/workflows/CiWorkflow.yml@v0.3.4
+    uses: OpenDevicePartnership/patina-devops/.github/workflows/CiWorkflow.yml@add_support_for_ci_workflow_artifact_upload
     with:
       build-tasks: build
+      run-cargo-vet: false
       additional-artifacts: |
         target/x86_64-unknown-uefi/debug/qemu_dxe_readiness_capture.efi
         target/x86_64-unknown-uefi/debug/qemu_dxe_readiness_capture.pdb
